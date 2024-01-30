@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Core\DbContext\Dtos\**" />
+    <Content Remove="Core\DbContext\Dtos\**" />
+    <EmbeddedResource Remove="Core\DbContext\Dtos\**" />
+    <None Remove="Core\DbContext\Dtos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.14" />

@@ -1,5 +1,7 @@
 using JwtAuthLogin.Core.DbContext;
 using JwtAuthLogin.Core.Entities;
+using JwtAuthLogin.Core.Interfaces;
+using JwtAuthLogin.Core.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -64,7 +66,13 @@ builder.Services
     });
 
 
+//inject app dependencies 
+
+builder.Services.AddScoped<IAuthService, AuthService>();
+
+
 //pipeline
+
 
 var app = builder.Build();
 
